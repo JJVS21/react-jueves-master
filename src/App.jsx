@@ -1,19 +1,27 @@
-
+import { useState } from 'react' 
 import './App.css'
-import Saludo from './Saludo'
 
-function Saludo(){
- return <h2>Hola,Bienvenido a mi aplicación react!</h2>
-}
+function App(){
+  const[contador, setContador]= useState(0)
 
-function App() {
- 
+  const incrementar = () => {
+    setContador(contador + 1)
+  }
+  const descrementar = () => {
+    setContador(contador - 1)
+  }
+  const resetear = () => {
+    setContador(0)
+  }
+  
   return (
     <>
-     <img src="./src/assets/gojologo.png.jfif" className='logo' alt="logo" />
-      <h1>Welcome to my react App</h1>
-      <Saludo/>
-      <p>esta es una aplicación</p>
+      <h1>Contador</h1>
+      <h2>{contador}</h2>
+      <button onClick={incrementar}>Incrementar</button>
+      <button onClick={descrementar}>Decrementar</button>
+      <button onClick={resetear}>Resetear</button>
+    
     </>
   )
 }
