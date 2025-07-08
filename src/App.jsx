@@ -126,17 +126,17 @@ function App() {
         <tbody>
           {alumnos.map((a, i) => (
             <tr key={i}>
-              <td style={{ color: '#000080' }}>{a.nombre}</td>         // azul oscuro
-              <td style={{ color: '#006400' }}>{a.asignatura}</td>     // verde oscuro
-              <td style={{ color: '#8B0000' }}>{a.promedio}</td>        // rojo oscuro
+              <td style={{ color: '#000080' }}>{a.nombre}</td>          {/* Nombre en azul oscuro */}
+              <td style={{ color: '#006400' }}>{a.asignatura}</td>      {/* Asignatura en verde oscuro */}
+              <td style={{ color: '#8B0000' }}>{a.promedio}</td>        {/* Promedio en rojo oscuro */}
               <td style={{
                 backgroundColor: getColorByEscala(a.escala),
                 color: 'white',
                 fontWeight: 'bold',
                 textAlign: 'center'
-                }}>
+              }}>
                 {a.escala}
-                </td>
+              </td>
               <td>
                 <button onClick={() => handleEdit(i)}>Editar</button>
                 <button onClick={() => handleDelete(i)}>Eliminar</button>
