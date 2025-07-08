@@ -43,7 +43,6 @@ function App() {
     }
   };
 
-
   // Manejar cambios en inputs del formulario
   const handleChange = (e) => {
     const { name, value } = e.target;
